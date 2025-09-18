@@ -1,7 +1,7 @@
 import pygame
 import sys
 
-from zpy.color import Color
+from zpy.Color import Color
 
 # Initialisation de Pygame
 pygame.init()
