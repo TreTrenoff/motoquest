@@ -1,6 +1,8 @@
 import pygame
 import sys
 
+from zpy.color import Color
+
 # Initialisation de Pygame
 pygame.init()
 
@@ -9,13 +11,12 @@ WIDTH, HEIGHT = 800, 600
 screen = pygame.display.set_mode((WIDTH, HEIGHT))
 pygame.display.set_caption("Template Pygame")
 
-# Couleurs
-WHITE = (255, 255, 255)
-BLACK = (0, 0, 0)
+
 
 # Boucle principale
 clock = pygame.time.Clock()
 running = True
+
 while running:
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
@@ -24,7 +25,7 @@ while running:
     # Logique du jeu ici
 
     # Dessin
-    screen.fill(WHITE)
+    screen.fill(Color.WHITE)
     # Ajoutez vos dessins ici
 
     pygame.display.flip()
