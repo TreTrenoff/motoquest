@@ -11,13 +11,16 @@ pygame.init()
 WIDTH, HEIGHT = 800, 600
 screen = pygame.display.set_mode((WIDTH, HEIGHT))
 pygame.display.set_caption("MotoQuest")
-
+ 
 player = Player(100, 100)
 all_sprites = pygame.sprite.Group(player)
 
 # Boucle principale
 clock = pygame.time.Clock()
 running = True
+
+WHITE = (255, 255, 255)
+BLACK = (0, 0, 0)
 
 while running:
     for event in pygame.event.get():
@@ -28,7 +31,7 @@ while running:
     all_sprites.update()
 
     # Dessin
-    screen.fill(Color.WHITE)
+    screen.fill(WHITE)
     # Ajoutez vos dessins ici
     all_sprites.draw(screen)
 
